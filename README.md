@@ -17,7 +17,7 @@ coder.generator = CsharpMicrosoftCodingStyles;
 
 // Start coding, without worrying about output format
 coder.namespace('App', function (coder) {
-    coder.class('public', Program', function (coder) {
+    coder.class('public', 'Program', function (coder) {
         coder.method('public static int', Main', function (coder) {
             coder.write('System.Console.WriteLine("Hello Code!");');
             coder.write('return 0;');
