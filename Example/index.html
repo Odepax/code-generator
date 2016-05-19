@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+			body {
+				background: #000;
+				color: white;
+				font-size: 1.3em;
+			}
+			pre {
+				width: 46%;
+				margin: 20px auto;
+				padding: 20px;
+				background: #333;
+			}
+		</style>
+	</head>
+	<body>
+		<pre id="code"></pre>
+
+		<script src="../CodeGenerator.js"></script>
+
+		<script src="CsJohnCodingStyle.js"></script>
+		<script src="CsMSCodingStyle.js"></script>
+
+		<script src="CsCoder.js"></script>
+
+		<script>
+			var code = Object.create(CsCoder);
+
+			/**/ code.codingStyle = CsMSCodingStyle;
+			//**/ code.codingStyle = CsJohnCodingStyle;
+
+			code.write('using System;');
+			code.write();
+			code.namespace('App', function(code) {
+				code.class('public', 'Program', function(code) {
+					code.method('public static void', 'Main', function(code) {
+						code.write('int i = 0;');
+						code.write();
+						code.if('i == 0', function(code) {
+							code.write('Console.WriteLine("It works!");');
+							code.write('return 0;');
+						});
+						code.else(function(code) {
+							code.write('Console.WriteLine("It fails!");');
+							code.write('return 1;');
+						});
+					});
+				});
+			});
+
+			document.getElementById('code').textContent = code.generatedCode;
+		</script>
+	</body>
+</html>
