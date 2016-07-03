@@ -30,7 +30,7 @@ coder.namespace('App', function (coder) {
 
 The ultimate goal is to be able to generate different strings from the same generation sequence, depending on defined coding style. So we can consider **coding styles as strategies**.
 
-![Simple example of code generator](README.img/java-simple-example.png)
+![Simple example of code generator](http://aygix.free.fr/down.php?path=github/Odepax/code-generator/java-simple-example.png)
 
 The architecture is divided into two parts: a low level _code generator_ and a higher level _coder_.
 
@@ -74,7 +74,7 @@ class Foo {
 
 A coder is designed to code in at least one language and **should not change** unless the language it's been designed for changes.
 
-![Code generator Strategies example with C#](README.img/cs-strategies-example.png)
+![Code generator Strategies example with C#](http://aygix.free.fr/down.php?path=github/Odepax/code-generator/cs-strategies-example.png)
 
 A coder uses a code generator as coding style strategy. It allows the coder to have a higher level vision of the language it's coding with.
 

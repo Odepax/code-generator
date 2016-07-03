@@ -30,7 +30,7 @@ coder.namespace('App', function (coder) {
 
 Le but est de générer différentes strings à partir de la même séquence de génération en fonction de la convention de programmation choisie. Ainsi, on peut considérer **les conventions de programmation comme étant des "strategies"**.
 
-![Générateur de code simple](README.img/java-simple-example.png)
+![Générateur de code simple](http://aygix.free.fr/down.php?path=github/Odepax/code-generator/java-simple-example.png)
 
 L'architecture utilise deux parties : un "_code generator_", entité de bas niveau, et un "_coder_", entité de haut niveau.
 
@@ -74,7 +74,7 @@ class Foo {
 
 Un "coder" est fait pour coder dans au moins un langage et **ne devrait pas être modifié** à moins que le langage lui-même ne change.
 
-![Code generator comme strategies avec C#](README.img/cs-strategies-example.png)
+![Code generator comme strategies avec C#](http://aygix.free.fr/down.php?path=github/Odepax/code-generator/cs-strategies-example.png)
 
 Le "coder" utilise un générateur comme une convention de codage, ce qui permet au "coder" d'avoir une vision plus haut niveau sur le langage qu'il pratique.
 
